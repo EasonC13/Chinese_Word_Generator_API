@@ -38,6 +38,7 @@ def generateText(input_text: str = "你好[喜歡]", nsamples: int = 1):
     
 def text_preprocessing(text):
     text = text.replace("\n", "")
+    text = text.replace(" ", "")
     text = text.lower()
     if "[噁心]" in text:
         text.replace("[噁心]", "[厭惡]")
